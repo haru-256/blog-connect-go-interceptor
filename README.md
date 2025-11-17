@@ -27,8 +27,8 @@ make chat            # Bidirectional Streaming
 
 Client側
 
-![client](./images/connect-goのUnaryとStreamのインターセプタ解説/client-bidirectional-streaming.png)
+![client](./images/client-bidirectional-streaming.png)
 
 Server側
 
-![server](./images/connect-goのUnaryとStreamのインターセプタ解説/server-bidirectional-streaming.png)
+![server](./images/server-bidirectional-streaming.png)
