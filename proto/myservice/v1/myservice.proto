@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package myservice.v1;
+
+service MyService {
+  // Unary RPC
+  rpc GetUser(GetUserRequest) returns (GetUserResponse);
+  // Server Streaming RPC
+  rpc ListUsers(ListUsersRequest) returns (stream ListUsersResponse);
+  // Client Streaming RPC
+  rpc UpdateUsers(stream UpdateUsersRequest) returns (UpdateUsersResponse);
+  // Bidirectional Streaming RPC
+  rpc Chat(stream ChatRequest) returns (stream ChatResponse);
+}
+
+message User {
+  string user_id = 1;
+  string name = 2;
+}
+
+message GetUserRequest {
+  string user_id = 1;
+}
+message GetUserResponse {
+  User user = 1;
+}
+
+message ListUsersRequest {
+  int32 page_size = 1;
+  string page_token = 2;
+}
+message ListUsersResponse {
+  repeated User users = 1;
+  string next_page_token = 2;
+}
+
+message UpdateUsersRequest {
+  repeated User users = 1;
+}
+message UpdateUsersResponse {
+  int32 updated_count = 1;
+}
+
+message ChatRequest {
+  string text = 1;
+}
+message ChatResponse {
+  string text = 1;
+}
