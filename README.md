@@ -1,5 +1,7 @@
 # 記事: connect-goインターセプタ実装パターンガイド - Unary/Streaming対応 のサンプルコード
 
+記事: [connect-goインターセプタ実装パターンガイド - Unary/Streaming対応](https://zenn.dev/haru256/articles/d6742c40e1e185) のサンプルコードリポジトリです。
+
 このリポジトリには、以下のすべてが含まれています：
 
 * **完全なインターセプタ実装** (`internal/interceptor/logger.go`)
